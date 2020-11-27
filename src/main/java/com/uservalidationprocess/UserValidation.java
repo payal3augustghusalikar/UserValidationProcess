@@ -13,6 +13,7 @@ public class UserValidation {
         userValidation.validateUserFirstName();
         userValidation.validateUserLastName();
         userValidation.validateEmail();
+        userValidation.mobileNumber();
     }
 
     boolean check = true;
@@ -20,7 +21,7 @@ public class UserValidation {
     public void validateUserFirstName() {
 
         while (check) {
-            System.out.println("Enter your First Name");
+            System.out.println("Enter your First Name starting with capital letter and minimum 3 Character");
             String firstName = scanner.nextLine();
             boolean isValid = userValidationProcess.validateFirstName(firstName);
             if (isValid == check) {
@@ -37,7 +38,7 @@ public class UserValidation {
     public void validateUserLastName() {
 
         while (check) {
-            System.out.println("Enter your Last Name");
+            System.out.println("Enter your Last Name starting with capital letter and minimum 3 Character");
             String lastName = scanner.nextLine();
             boolean isValid = userValidationProcess.validateLastName(lastName);
             if (isValid == check) {
@@ -62,6 +63,23 @@ public class UserValidation {
                 break;
             } else {
                 System.out.println("Your Entered Email-id is invalid");
+                check = true;
+            }
+        }
+        System.out.println("------------------------------");
+    }
+
+    public void mobileNumber() {
+
+        while (check) {
+            System.out.println("Enter your mobile Number");
+            String mobileNumber = scanner.nextLine();
+            boolean isValid = userValidationProcess.validateMobileNumber(mobileNumber);
+            if (isValid == check) {
+                System.out.println("Your Entered mobileNumber is valid");
+                break;
+            } else {
+                System.out.println("Your Entered mobile Number is invalid");
                 check = true;
             }
         }

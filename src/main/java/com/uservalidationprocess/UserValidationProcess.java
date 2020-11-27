@@ -6,7 +6,7 @@ public class UserValidationProcess {
     String firstNamePattern = "^[A-Z]{1}[a-z]{2,}$";
     String lastNamePattern = "^[A-Z]{1}[a-z]{2,}$";
     String emailPattern = "^([a-z]{3,})([.]{0,1}[a-z]*)@([a-z]{2}).([a-z]{2})([.]{1}[a-z]{2}){0,1}$";
-
+    String mobileNumberPattern = "^([0-9]{2})[ ]([1-9]{1}[0-9]{9})$";
 
     public boolean validateFirstName(String firstName) {
         return Pattern.matches(firstNamePattern,firstName);
@@ -18,5 +18,9 @@ public class UserValidationProcess {
 
     public boolean validateEmail(String email) {
         return Pattern.matches(emailPattern,email);
+    }
+
+    public boolean validateMobileNumber(String mobileNumber) {
+        return Pattern.matches(mobileNumberPattern,mobileNumber);
     }
 }
