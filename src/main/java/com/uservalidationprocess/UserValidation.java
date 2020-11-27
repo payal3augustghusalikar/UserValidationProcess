@@ -8,17 +8,18 @@ public class UserValidation {
 
     public static void main(String[] args) {
         UserValidation userValidation = new UserValidation();
-        System.out.println("Welcome to User validation process");
+        System.out.println("******* Welcome to User validation process *******");
 
         userValidation.validateUserFirstName();
         userValidation.validateUserLastName();
+        userValidation.validateEmail();
     }
 
     boolean check = true;
 
     public void validateUserFirstName() {
 
-        while (check == true) {
+        while (check) {
             System.out.println("Enter your First Name");
             String firstName = scanner.nextLine();
             boolean isValid = userValidationProcess.validateFirstName(firstName);
@@ -34,7 +35,8 @@ public class UserValidation {
     }
 
     public void validateUserLastName() {
-        while (check == true) {
+
+        while (check) {
             System.out.println("Enter your Last Name");
             String lastName = scanner.nextLine();
             boolean isValid = userValidationProcess.validateLastName(lastName);
@@ -43,6 +45,23 @@ public class UserValidation {
                 break;
             } else {
                 System.out.println("Your Entered Name is invalid");
+                check = true;
+            }
+        }
+        System.out.println("------------------------------");
+    }
+
+    public void validateEmail() {
+
+        while (check) {
+            System.out.println("Enter your Email");
+            String email = scanner.nextLine();
+            boolean isValid = userValidationProcess.validateEmail(email);
+            if (isValid == check) {
+                System.out.println("Your Entered Email-id is valid");
+                break;
+            } else {
+                System.out.println("Your Entered Email-id is invalid");
                 check = true;
             }
         }
