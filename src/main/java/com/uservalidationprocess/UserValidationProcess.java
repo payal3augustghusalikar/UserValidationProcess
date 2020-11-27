@@ -7,7 +7,7 @@ public class UserValidationProcess {
     String lastNamePattern = "^[A-Z]{1}[a-z]{2,}$";
     String emailPattern = "^([a-z]{3,})([.]{0,1}[a-z]*)@([a-z]{2}).([a-z]{2})([.]{1}[a-z]{2}){0,1}$";
     String mobileNumberPattern = "^([0-9]{2})[ ]([1-9]{1}[0-9]{9})$";
-    String passwordPattern = "^[A-Za-z0-9]{8,}$";
+    String passwordPattern = "^(.*[A-Z]{1}[A-Za-z0-9]{7,})$";
 
     public boolean validateFirstName(String firstName) {
         return Pattern.matches(firstNamePattern,firstName);
