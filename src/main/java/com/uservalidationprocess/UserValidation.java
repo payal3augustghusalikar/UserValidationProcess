@@ -72,14 +72,14 @@ public class UserValidation {
     public void mobileNumber() {
 
         while (check) {
-            System.out.println("Enter your mobile Number");
+            System.out.println("Enter your mobile Number, with country code");
             String mobileNumber = scanner.nextLine();
             boolean isValid = userValidationProcess.validateMobileNumber(mobileNumber);
             if (isValid == check) {
-                System.out.println("Your Entered mobileNumber is valid");
+                System.out.println("Your Entered mobile Number is valid");
                 break;
             } else {
-                System.out.println("Your Entered mobile Number is invalid");
+                System.out.println("Your Entered mobile Number is invalid, Enter again");
                 check = true;
             }
         }
