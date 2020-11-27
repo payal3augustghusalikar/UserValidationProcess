@@ -10,10 +10,10 @@ public class UserValidation {
         UserValidation userValidation = new UserValidation();
         System.out.println("******* Welcome to User validation process *******");
 
-       // userValidation.validateUserFirstName();
-      //  userValidation.validateUserLastName();
-      //  userValidation.validateEmail();
-      //  userValidation.mobileNumber();
+        userValidation.validateUserFirstName();
+        userValidation.validateUserLastName();
+        userValidation.validateEmail();
+        userValidation.mobileNumber();
         userValidation.validatepassword();
     }
 
