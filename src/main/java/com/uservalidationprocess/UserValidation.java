@@ -14,6 +14,7 @@ public class UserValidation {
         userValidation.validateUserLastName();
         userValidation.validateEmail();
         userValidation.mobileNumber();
+        userValidation.validatepassword();
     }
 
     boolean check = true;
@@ -80,6 +81,23 @@ public class UserValidation {
                 break;
             } else {
                 System.out.println("Your Entered mobile Number is invalid, Enter again");
+                check = true;
+            }
+        }
+        System.out.println("------------------------------");
+    }
+
+    public void validatepassword() {
+
+        while (check) {
+            System.out.println("Enter your password, with minimum 8 character");
+            String password = scanner.nextLine();
+            boolean isValid = userValidationProcess.validatepassword(password);
+            if (isValid == check) {
+                System.out.println("Your Entered password is valid");
+                break;
+            } else {
+                System.out.println("Your Entered password is invalid, Enter again");
                 check = true;
             }
         }
