@@ -22,7 +22,7 @@ public class TestUserValidator {
     public void givenFirstName_WhenFirstNameHaveMinimumThreeLetters_ShouldReturn_True() {
         boolean result = userValidationProcess.validateFirstName("Pay");
         Assert.assertEquals(true, result);
-
+        
     }
 
     @Test
