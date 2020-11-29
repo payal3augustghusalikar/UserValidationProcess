@@ -91,7 +91,7 @@ public class UserValidation {
         while (check) {
             System.out.println("Enter your password, with minimum 8 character");
             String password = scanner.nextLine();
-            boolean isValid = userValidationProcess.validatepassword(password);
+            boolean isValid = userValidationProcess.validatePassword(password);
             if (isValid == check) {
                 System.out.println("Your Entered password is valid");
                 break;
