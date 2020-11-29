@@ -53,22 +53,22 @@ public class TestUserValidator {
         boolean result = userValidationProcess.validateLastName("Pa");
         Assert.assertFalse(result);
     }
-   /* @Test
+    @Test
     public void givenEmail_WhenEmailStartsWithSmallLetter_ShouldReturn_True() {
         boolean result = userValidationProcess.validateEmail("payal64@gmail.com");
-        Assert.assertEquals(true, result);
-    }*/
+        Assert.assertTrue(result);
+    }
     @Test
     public void givenEmail_WhenEmailNotStartsWithSmallLetter_ShouldReturn_False() {
         boolean result = userValidationProcess.validateEmail("Abc@gmail.com");
         Assert.assertFalse(result);
     }
 
-   /*@Test
+   @Test
     public void givenEmail_WhenEmailContainMinimumTwoLetterAfterDot_ShouldReturn_True() {
         boolean result = userValidationProcess.validateEmail("abc@gmail.co");
         Assert.assertTrue(result);
-    }*/
+    }
     @Test
     public void givenEmail_WhenEmailNotContainMinimumTwoLetterAfterDot_ShouldReturn_False() {
         boolean result = userValidationProcess.validateEmail("abc@gmail.c");
@@ -126,12 +126,12 @@ public class TestUserValidator {
         Assert.assertFalse(result);
     }
     @Test
-    public void givenPassword_WhenPasswordHaveAtleastOneSpeacialCharacter_ShouldReturn_True() {
+    public void givenPassword_WhenPasswordHaveAtleastOneSpecialCharacter_ShouldReturn_True() {
         boolean result = userValidationProcess.validatePassword("Payal@234");
         Assert.assertTrue(result);
     }
     @Test
-    public void givenPassword_WhenPasswordNotHaveAtleastOneSpeacialCharacter_ShouldReturn_False() {
+    public void givenPassword_WhenPasswordNotHaveAtleastOneSpecialCharacter_ShouldReturn_False() {
         boolean result = userValidationProcess.validatePassword("Payalh123");
         Assert.assertFalse(result);
     }
