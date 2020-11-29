@@ -14,10 +14,12 @@ public class UserValidationProcess {
     }
 
     public boolean validateLastName(String lastName) {
+
         return Pattern.matches(lastNamePattern,lastName);
     }
 
     public boolean validateEmail(String email) {
+
         return Pattern.matches(emailPattern,email);
     }
 
@@ -26,6 +28,7 @@ public class UserValidationProcess {
     }
 
     public boolean validatepassword(String password) {
+
         return Pattern.matches(passwordPattern,password);
     }
 }

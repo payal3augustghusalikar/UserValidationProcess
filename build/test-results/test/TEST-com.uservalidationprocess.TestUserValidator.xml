@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.uservalidationprocess.TestUserValidator" tests="8" skipped="0" failures="0" errors="0" timestamp="2020-11-28T08:37:34" hostname="DESKTOP-S0RN8B8" time="0.115">
+  <properties/>
+  <testcase name="givenFirstName_WhenFirstNameHaveMinimumThreeLetters_ShouldReturn_True" classname="com.uservalidationprocess.TestUserValidator" time="0.008"/>
+  <testcase name="givenFirstName_WhenFirstNameNotStartsWithCapitalLetter_ShouldReturn_False" classname="com.uservalidationprocess.TestUserValidator" time="0.028"/>
+  <testcase name="givenFirstName_WhenLastNameHaveMinimumThreeLetters_ShouldReturn_True" classname="com.uservalidationprocess.TestUserValidator" time="0.007"/>
+  <testcase name="givenLastName_WhenFirstNameNotStartsWithCapitalLetter_ShouldReturn_False" classname="com.uservalidationprocess.TestUserValidator" time="0.005"/>
+  <testcase name="givenFirstName_WhenFirstNameStartsWithCapitalLetter_ShouldReturn_True" classname="com.uservalidationprocess.TestUserValidator" time="0.005"/>
+  <testcase name="givenFirstName_WhenFirstNameNotHaveMinimumThreeLetters_ShouldReturn_False" classname="com.uservalidationprocess.TestUserValidator" time="0.014"/>
+  <testcase name="givenFirstName_WhenLastNameStartsWithCapitalLetter_ShouldReturn_True" classname="com.uservalidationprocess.TestUserValidator" time="0.003"/>
+  <testcase name="givenLastName_WhenFirstNameNotHaveMinimumThreeLetters_ShouldReturn_False" classname="com.uservalidationprocess.TestUserValidator" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -2,6 +2,7 @@ package com.uservalidationprocess;
 import java.util.Scanner;
 
 public class UserValidation {
+    boolean check = true;
 
     UserValidationProcess userValidationProcess = new UserValidationProcess();
     Scanner scanner = new Scanner(System.in);
@@ -10,14 +11,13 @@ public class UserValidation {
         UserValidation userValidation = new UserValidation();
         System.out.println("******* Welcome to User validation process *******");
 
-        userValidation.validateUserFirstName();
-        userValidation.validateUserLastName();
-        userValidation.validateEmail();
+        //userValidation.validateUserFirstName();
+       // userValidation.validateUserLastName();
+       // userValidation.validateEmail();
         userValidation.mobileNumber();
-        userValidation.validatepassword();
+       // userValidation.validatepassword();
     }
 
-    boolean check = true;
 
     public void validateUserFirstName() {
 
@@ -72,16 +72,15 @@ public class UserValidation {
 
     public void mobileNumber() {
 
-        while (check) {
+        while (true) {
             System.out.println("Enter your mobile Number, with country code");
             String mobileNumber = scanner.nextLine();
             boolean isValid = userValidationProcess.validateMobileNumber(mobileNumber);
-            if (isValid == check) {
+            if (isValid) {
                 System.out.println("Your Entered mobile Number is valid");
                 break;
             } else {
                 System.out.println("Your Entered mobile Number is invalid, Enter again");
-                check = true;
             }
         }
         System.out.println("------------------------------");
