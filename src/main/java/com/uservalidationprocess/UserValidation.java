@@ -11,11 +11,11 @@ public class UserValidation {
         UserValidation userValidation = new UserValidation();
         System.out.println("******* Welcome to User validation process *******");
 
-        //userValidation.validateUserFirstName();
-       // userValidation.validateUserLastName();
-       // userValidation.validateEmail();
-        userValidation.mobileNumber();
-       // userValidation.validatepassword();
+        userValidation.validateUserFirstName();
+        userValidation.validateUserLastName();
+        userValidation.validateUserEmail();
+        userValidation.validateUserMobileNumber();
+        userValidation.validateUserpassword();
     }
 
 
@@ -53,7 +53,7 @@ public class UserValidation {
         System.out.println("------------------------------");
     }
 
-    public void validateEmail() {
+    public void validateUserEmail() {
 
         while (check) {
             System.out.println("Enter your Email");
@@ -70,7 +70,7 @@ public class UserValidation {
         System.out.println("------------------------------");
     }
 
-    public void mobileNumber() {
+    public void validateUserMobileNumber() {
 
         while (true) {
             System.out.println("Enter your mobile Number, with country code");
@@ -86,7 +86,7 @@ public class UserValidation {
         System.out.println("------------------------------");
     }
 
-    public void validatepassword() {
+    public void validateUserpassword() {
 
         while (check) {
             System.out.println("Enter your password, with minimum 8 character");

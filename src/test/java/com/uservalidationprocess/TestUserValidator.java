@@ -53,9 +53,9 @@ public class TestUserValidator {
         boolean result = userValidationProcess.validateLastName("Pa");
         Assert.assertFalse(result);
     }
-   @Test
+    @Test
     public void givenEmail_WhenEmailStartsWithSmallLetter_ShouldReturn_True() {
-        boolean result = userValidationProcess.validateEmail("payalghusalikar@gmail.com");
+        boolean result = userValidationProcess.validateEmail("payalgggg@gmail.com");
         Assert.assertTrue(result);
     }
 
@@ -65,13 +65,33 @@ public class TestUserValidator {
         Assert.assertFalse(result);
     }
    @Test
-    public void givenEmail_WhenEmailContainMinimumOneLetterAfterDot_ShouldReturn_True() {
-        boolean result = userValidationProcess.validateEmail("abc@gmail.c");
+    public void givenEmail_WhenEmailContainMinimumTwoLetterAfterDot_ShouldReturn_True() {
+        boolean result = userValidationProcess.validateEmail("abc@gmail.co");
         Assert.assertTrue(result);
     }
     @Test
-    public void givenEmail_WhenEmailNotWhenEmailContainMinimumOneLetterAfterDot_ShouldReturn_False() {
-        boolean result = userValidationProcess.validateEmail("abc@gmail.");
+    public void givenEmail_WhenEmailNotContainMinimumTwoLetterAfterDot_ShouldReturn_False() {
+        boolean result = userValidationProcess.validateEmail("abc@gmail.c");
+        Assert.assertFalse(result);
+    }
+    @Test
+    public void givenPhoneNumber_WhenPhoneNumberIsFollowedByCountryCode_True() {
+        boolean result = userValidationProcess.validateMobileNumber("91 9604445258");
+        Assert.assertTrue( result);
+    }
+    @Test
+    public void givenPhoneNumber_WhenPhoneNumberIsNotFollowedByCountryCode_ShouldReturn_False() {
+        boolean result = userValidationProcess.validateMobileNumber("8105215414");
+        Assert.assertFalse(result);
+    }
+    @Test
+    public void givenPhoneNumber_WhenPhoneNumberIsTenDigit_ShouldReturn_True() {
+        boolean result =  userValidationProcess.validateMobileNumber("91 9604445258");
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void givenPhoneNumber_WhenPhoneNumberIsNotTenDigit_ShouldReturn_False() {
+        boolean result = userValidationProcess.validateMobileNumber("91 8105215");
         Assert.assertFalse(result);
     }
 }
