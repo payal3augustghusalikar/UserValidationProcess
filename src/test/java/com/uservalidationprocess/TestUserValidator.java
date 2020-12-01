@@ -99,7 +99,7 @@ public class TestUserValidator {
     @Test
     public void givenEmail_WhenEmailStartsWithSmallLetter_ShouldReturn_True() {
         try {
-            boolean result = userValidationProcess.validateEmail("payal64@gmail.com");
+            boolean result = userValidationProcess.validateEmail("payal@gmail.com");
 
             Assert.assertTrue(result);
         } catch (UserValidationException e) {
@@ -121,9 +121,9 @@ public class TestUserValidator {
     }
 
     @Test
-    public void givenEmail_WhenEmailContainMinimumTwoLetterAfterDot_ShouldReturn_True() {
+    public void givenEmail_WhenEmailContainMinimumTwoLetterAfterDot_ShouldReturn_True ()  {
         try {
-            boolean result = userValidationProcess.validateEmail("abc@gmail.co");
+            boolean result = userValidationProcess.validateEmail("abc@gmail.bl");
             Assert.assertTrue(result);
         } catch (UserValidationException e) {
             System.out.println(e.getMessage());
