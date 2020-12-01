@@ -25,7 +25,6 @@ public class UserValidation {
         userValidation.validateUserPassword();
         userValidation.validateValidEmailSamples();
         userValidation.validateInvalidEmailSamples();
-
     }
 
 
